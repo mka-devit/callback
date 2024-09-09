@@ -1,0 +1,260 @@
+Запуск script2.sh в 2024-09-05 16:53:33
+2024-09-05 16:53:33
+nohup: failed to run command '/path/to/script2.sh': No such file or directory
+Запуск script2.sh в 2024-09-05 16:55:05
+2024-09-05 16:55:05
+nohup: failed to run command '/path/to/script2.sh': No such file or directory
+Запуск script2.sh в 2024-09-05 16:56:09
+2024-09-05 16:56:09
+nohup: failed to run command '/var/www/html/script/script2.sh': Permission denied
+Запуск script2.sh в 2024-09-05 16:56:39
+2024-09-05 16:56:39
+script2.sh уже запущен. 2024-09-05 17:05:50
+script2.sh уже запущен. 2024-09-05 17:06:05
+script2.sh уже запущен. 2024-09-05 17:06:20
+script2.sh уже запущен. 2024-09-05 17:06:35
+script2.sh уже запущен. 2024-09-05 17:06:50
+Запуск script2.sh в 2024-09-05 17:11:02
+2024-09-05 17:11:02
+Запуск script2.sh в 2024-09-05 17:18:59
+2024-09-05 17:18:59
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+script2.sh уже запущен. 2024-09-05 17:19:14
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+script2.sh уже запущен. 2024-09-05 17:19:29
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+script2.sh уже запущен. 2024-09-05 17:19:44
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+script2.sh уже запущен. 2024-09-05 17:19:59
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+script2.sh уже запущен. 2024-09-05 17:20:14
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+script2.sh уже запущен. 2024-09-05 17:20:29
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+script2.sh уже запущен. 2024-09-05 17:20:44
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+script2.sh уже запущен. 2024-09-05 17:20:59
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+script2.sh уже запущен. 2024-09-05 17:21:14
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+script2.sh уже запущен. 2024-09-05 17:21:29
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+script2.sh уже запущен. 2024-09-05 17:21:44
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+script2.sh уже запущен. 2024-09-05 17:21:59
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+script2.sh уже запущен. 2024-09-05 17:22:14
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+script2.sh уже запущен. 2024-09-05 17:22:29
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 12: jq: command not found
+/var/www/html/script/script2.sh: line 37: [: : integer expression expected
+Запуск script2.sh в 2024-09-05 17:23:53
+2024-09-05 17:23:53
+mv: cannot move '/var/www/html/create/977278341.call' to 'syuda/1/2': No such file or directory
+mv: cannot move '/var/www/html/create/977278341.call' to 'syuda/1/2': No such file or directory
+script2.sh уже запущен. 2024-09-05 17:24:08
+mv: cannot move '/var/www/html/create/977278341.call' to 'syuda/1/2': No such file or directory
+script2.sh уже запущен. 2024-09-05 17:24:23
+mv: cannot move '/var/www/html/create/977278341.call' to 'syuda/1/2': No such file or directory
+script2.sh уже запущен. 2024-09-05 17:24:38
+mv: cannot move '/var/www/html/create/977278341.call' to 'syuda/1/2': No such file or directory
+script2.sh уже запущен. 2024-09-05 17:24:53
+mv: cannot move '/var/www/html/create/977278341.call' to 'syuda/1/2': No such file or directory
+mv: cannot move '/var/www/html/create/977278341.call' to 'syuda/1/2': No such file or directory
+script2.sh уже запущен. 2024-09-05 17:25:08
+mv: cannot move '/var/www/html/create/977278341.call' to 'syuda/1/2': No such file or directory
+mv: cannot move '/var/www/html/create/977278341.call' to 'syuda/1/2': No such file or directory
+mv: cannot move '/var/www/html/create/977278341.call' to 'syuda/1/2': No such file or directory
+mv: cannot move '/var/www/html/create/977278341.call' to 'syuda/1/2': No such file or directory
+script2.sh уже запущен. 2024-09-05 17:26:21
+script2.sh уже запущен. 2024-09-05 17:26:36
+script2.sh уже запущен. 2024-09-05 17:26:51
+script2.sh уже запущен. 2024-09-05 17:27:03
+script2.sh уже запущен. 2024-09-05 17:27:05
+script2.sh уже запущен. 2024-09-05 17:27:07
+script2.sh уже запущен. 2024-09-05 17:27:09
+script2.sh уже запущен. 2024-09-05 17:27:11
+script2.sh уже запущен. 2024-09-05 17:27:13
+script2.sh уже запущен. 2024-09-05 17:27:15
+script2.sh уже запущен. 2024-09-05 17:27:17
+script2.sh уже запущен. 2024-09-05 17:27:19
+script2.sh уже запущен. 2024-09-05 17:27:21
+script2.sh уже запущен. 2024-09-05 17:27:23
+script2.sh уже запущен. 2024-09-05 17:27:25
+script2.sh уже запущен. 2024-09-05 17:27:27
+script2.sh уже запущен. 2024-09-05 17:27:29
+script2.sh уже запущен. 2024-09-05 17:27:31
+script2.sh уже запущен. 2024-09-05 17:27:33
+script2.sh уже запущен. 2024-09-05 17:27:36
+script2.sh уже запущен. 2024-09-05 17:27:38
+script2.sh уже запущен. 2024-09-05 17:27:40
+script2.sh уже запущен. 2024-09-05 17:27:42
+script2.sh уже запущен. 2024-09-05 17:27:44
+script2.sh уже запущен. 2024-09-05 17:27:46
+script2.sh уже запущен. 2024-09-05 17:27:48
+script2.sh уже запущен. 2024-09-05 17:27:50
+script2.sh уже запущен. 2024-09-05 17:27:52
+script2.sh уже запущен. 2024-09-05 17:27:54
+script2.sh уже запущен. 2024-09-05 17:27:56
+script2.sh уже запущен. 2024-09-05 17:27:58
+script2.sh уже запущен. 2024-09-05 17:28:00
+script2.sh уже запущен. 2024-09-05 17:28:02
+script2.sh уже запущен. 2024-09-05 17:28:13
+script2.sh уже запущен. 2024-09-05 17:28:15
+script2.sh уже запущен. 2024-09-05 17:28:17
+script2.sh уже запущен. 2024-09-05 17:28:19
+script2.sh уже запущен. 2024-09-05 17:28:21
+script2.sh уже запущен. 2024-09-05 17:28:23
+script2.sh уже запущен. 2024-09-05 17:28:25
+script2.sh уже запущен. 2024-09-05 17:28:27
+script2.sh уже запущен. 2024-09-05 17:28:29
+script2.sh уже запущен. 2024-09-05 17:28:31
+script2.sh уже запущен. 2024-09-05 17:28:33
+script2.sh уже запущен. 2024-09-05 17:28:35
+script2.sh уже запущен. 2024-09-05 17:28:37
+script2.sh уже запущен. 2024-09-05 17:28:39
+script2.sh уже запущен. 2024-09-05 17:28:41
+script2.sh уже запущен. 2024-09-05 17:28:43
+script2.sh уже запущен. 2024-09-05 17:28:45
+script2.sh уже запущен. 2024-09-05 17:28:47
+script2.sh уже запущен. 2024-09-05 17:28:51
+script2.sh уже запущен. 2024-09-05 17:28:53
+script2.sh уже запущен. 2024-09-05 17:28:55
+script2.sh уже запущен. 2024-09-05 17:28:57
+script2.sh уже запущен. 2024-09-05 17:28:59
+script2.sh уже запущен. 2024-09-05 17:29:01
+script2.sh уже запущен. 2024-09-05 17:29:03
+script2.sh уже запущен. 2024-09-05 17:29:05
+script2.sh уже запущен. 2024-09-05 17:29:07
+script2.sh уже запущен. 2024-09-05 17:29:09
+script2.sh уже запущен. 2024-09-05 17:29:11
+script2.sh уже запущен. 2024-09-05 17:29:13
+script2.sh уже запущен. 2024-09-05 17:29:15
+script2.sh уже запущен. 2024-09-05 17:29:17
+script2.sh уже запущен. 2024-09-05 17:29:19
+script2.sh уже запущен. 2024-09-05 17:29:21
+script2.sh уже запущен. 2024-09-05 17:29:43
+script2.sh уже запущен. 2024-09-05 17:29:45
+script2.sh уже запущен. 2024-09-05 17:29:47
+script2.sh уже запущен. 2024-09-05 17:29:49
+script2.sh уже запущен. 2024-09-05 17:29:51
+script2.sh уже запущен. 2024-09-05 17:29:53
+script2.sh уже запущен. 2024-09-05 17:29:55
+script2.sh уже запущен. 2024-09-05 17:29:57
+script2.sh уже запущен. 2024-09-05 17:29:59
+script2.sh уже запущен. 2024-09-05 17:30:01
+script2.sh уже запущен. 2024-09-05 17:30:03
+script2.sh уже запущен. 2024-09-05 17:30:05
+script2.sh уже запущен. 2024-09-05 17:30:07
+script2.sh уже запущен. 2024-09-05 17:30:09
+script2.sh уже запущен. 2024-09-05 17:30:11
+script2.sh уже запущен. 2024-09-05 17:33:54
+script2.sh уже запущен. 2024-09-05 17:33:56
+script2.sh уже запущен. 2024-09-05 17:33:58
+script2.sh уже запущен. 2024-09-05 17:34:00
+script2.sh уже запущен. 2024-09-05 17:34:02
+script2.sh уже запущен. 2024-09-05 17:34:04
+script2.sh уже запущен. 2024-09-05 17:34:06
+script2.sh уже запущен. 2024-09-05 17:34:08
+script2.sh уже запущен. 2024-09-05 17:34:10
+script2.sh уже запущен. 2024-09-05 17:34:12
+script2.sh уже запущен. 2024-09-05 17:34:14
+script2.sh уже запущен. 2024-09-05 17:34:16
+script2.sh уже запущен. 2024-09-05 17:34:18
+script2.sh уже запущен. 2024-09-05 17:34:20
+script2.sh уже запущен. 2024-09-05 17:34:22
+script2.sh уже запущен. 2024-09-05 17:37:30
+script2.sh уже запущен. 2024-09-05 17:39:03
+script2.sh уже запущен. 2024-09-05 17:39:08
+script2.sh уже запущен. 2024-09-05 17:39:13
+script2.sh уже запущен. 2024-09-05 17:39:18
+script2.sh уже запущен. 2024-09-05 17:39:23
+script2.sh уже запущен. 2024-09-05 17:39:28

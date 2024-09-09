@@ -1,0 +1,138 @@
+/* Общие стили для страницы */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 20px; /* Увеличиваем размер шрифта */
+    line-height: 1; /* Добавляем высоту строки для удобства чтения */
+}
+
+/* Контейнер для формы */
+.login-container {
+    background-color: #161b22;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fade-slide-in 0.7s ease-out;
+}
+
+/* Заголовок */
+h2 {
+    color: #58a6ff;
+    margin-bottom: 20px;
+    animation: fade-in-up 0.8s ease-in-out;
+}
+
+/* Стили для меток */
+label {
+    display: block;
+    color: #8b949e;
+    font-size: 1em;
+    margin-bottom: 8px;
+    text-align: left;
+    animation: fade-in 0.6s ease-in-out;
+}
+
+/* Поля ввода */
+input[type="text"], input[type="password"] {
+    width: 93%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #21262d;
+    color: #c9d1d9;
+    border: 2px solid #30363d;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 25px; /* Увеличиваем размер текста в полях ввода */
+}
+
+input:focus {
+    background-color: #30363d;
+    border-color: #58a6ff;
+    outline: none;
+}
+
+/* Контейнер для поля пароля с иконкой */
+.password-container {
+    position: relative;
+}
+
+/* Иконка переключения видимости пароля */
+.toggle-password {
+    position: absolute;
+    margin-top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 1.7em;
+    color: #c9d1d9;
+}
+
+/* Кнопка */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #238636;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 18px; /* Изменяем размер текста на кнопке */
+}
+
+button:hover {
+    background-color: #2ea043;
+    transform: translateY(-3px);
+}
+
+button:active {
+    background-color: #1f6f2e;
+    transform: translateY(0);
+}
+
+/* Анимации */
+@keyframes fade-slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Ошибка */
+.error {
+    color: red;
+    margin-bottom: 20px;
+}
