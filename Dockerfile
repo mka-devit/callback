@@ -15,6 +15,13 @@ RUN apt-get update && apt-get install -y \
     tzdata \
     && docker-php-ext-install mysqli
 
+WORKDIR /var/www/html/
+
+RUN mkdir temp &&
+    mkdir upload &&
+    mkdir create &&
+    mkdir processed_logs
+
 # Настраиваем часовой пояс Ташкента (UTC+5)
 ENV TZ=Asia/Tashkent
 
