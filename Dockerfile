@@ -17,9 +17,9 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /var/www/html/
 
-RUN mkdir temp &&
-    mkdir upload &&
-    mkdir create &&
+RUN mkdir temp && \
+    mkdir upload && \ 
+    mkdir create && \
     mkdir processed_logs
 
 # Настраиваем часовой пояс Ташкента (UTC+5)
@@ -37,7 +37,7 @@ RUN chmod +x /var/www/html/script/script1.sh && \
 COPY script.service /lib/systemd/system/script.service 
 RUN systemctl daemon-reload
 RUN systemctl enable script
-
+RUN systemctl start script
 # Добавляем задачи в crontab для пользователя root
 RUN echo "0 8 * * * /var/www/html/script/script1.sh" >> /etc/crontab && \
     echo "0 22 * * * pkill -f script1.sh" >> /etc/crontab
