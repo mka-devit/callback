@@ -13,6 +13,5 @@ while true; do
         nohup /path/to/$SCRIPT_NAME >> $LOG_FILE 2>&1 &
     fi
     
-    # Ожидание перед следующей проверкой
-    sleep 5  # Проверять каждые 60 секунд (измените по необходимости)
+    sleep 5
 done
