@@ -5,15 +5,17 @@ services:
     ports:
       - "2580:80"  # Перенаправление порта 8080 на 80
     volumes:
-      - /var/spool/asterisk/outgoing/.:/var/www/html/finalfolder
+      - /var/spool/asterisk/outgoing/:/var/www/html/finalfolder
+      - .:/var/www/html
+
     environment:
       - APACHE_RUN_USER=www-data
       - APACHE_RUN_GROUP=www-data
-    networks:
-      - app-network
-networks:
-  app-network:
-    driver: bridge
+#    networks:
+#      - app-network
+#networks:
+#  app-network:
+#    driver: bridge
 
 volumes:
   db_data:
