@@ -1,8 +1,8 @@
 Channel: Local/{{number}}@callbackout/n
 Callerid: 712030071
-WaitTime: 20
+WaitTime: 21
 MaxRetries: 1
 RetryTime: 300
-Application: Dial
-Data: callback-planshet
+Application: queue
+Context: callback-planshet
 AlwaysDelete: Yes

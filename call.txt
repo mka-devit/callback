@@ -1,3 +1,31 @@
+Channel: Local/946608522@callbackout
+Callerid: 712030071
+WaitTime: 30
+MaxRetries: 2
+RetryTime: 30
+Context: callback-planshet
+Extension: 946608522
+AlwaysDelete: Yes
+
+
+помоги мне с кодом мне нужно чтобы я мог выбирать вид контекса щя у меня стоит "Data" и мне нужно его менять на "Context"
+по необходимости
+так еще мне нужно убрать Конфигурация переносов файлов и в ней 
+'''
+Количество файлов для переноса за раз:
+Интервал времени между переносами (в секундах):
+Путь к папке назначения:
+'''
+вот мой template.php
+Channel: Local/{{number}}@callbackout/n
+Callerid: 712030071
+WaitTime: 21
+MaxRetries: 1
+RetryTime: 300
+Application: queue
+Data: callback-planshet
+AlwaysDelete: Yes
+и это мой admin.php
 <?php
 session_start();
 
@@ -7,11 +35,23 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
     exit();
 }
 
-// Путь к файлу шаблона
+// Путь к конфигурационному файлу
+$configFile = 'config.json';
 $templateFile = 'template.php';
 
-// Обработка сохранения изменений в шаблон
+// Загрузка текущей конфигурации из файла config.json или установка значений по умолчанию
+$config = file_exists($configFile) ? json_decode(file_get_contents($configFile), true) : ['limit' => 30, 'interval' => 20, 'destination' => 'syuda'];
+
+// Обработка сохранения изменений в конфигурацию и шаблон
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Обновление конфигурации на основе пользовательских данных
+    $config['limit'] = intval($_POST['limit']);
+    $config['interval'] = intval($_POST['interval']);
+    $config['destination'] = $_POST['destination'];
+
+    // Сохранение конфигурации в файл config.json
+    file_put_contents($configFile, json_encode($config));
+
     // Обновление значений шаблона
     $channel = $_POST['channel'];
     $callerid = $_POST['callerid'];
@@ -19,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $maxRetries = $_POST['maxRetries'];
     $retryTime = $_POST['retryTime'];
     $application = $_POST['application'];
-    $useContext = $_POST['useContext'] === 'context'; // Флаг для выбора между "Data" и "Context"
+    $data = $_POST['data'];
 
     // Обновляем файл template.php на основе введенных данных
     $templateContent = "Channel: {$channel}\n";
@@ -28,8 +68,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $templateContent .= "MaxRetries: {$maxRetries}\n";
     $templateContent .= "RetryTime: {$retryTime}\n";
     $templateContent .= "Application: {$application}\n";
-    $templateContent .= ($useContext ? "Context" : "Data") . ": callback-planshet\n"; // Изменение между Data и Context
-    $templateContent .= "AlwaysDelete: Yes\n";  // Этот параметр всегда остается неизменным
+    $templateContent .= "Data: {$data}\n";
+    $templateContent .= "AlwaysDelete: Yes\n";  // Если этот параметр всегда должен оставаться неизменным
 
     // Сохраняем изменения в template.php
     file_put_contents($templateFile, $templateContent);
@@ -47,7 +87,7 @@ preg_match('/WaitTime: (.+)/', $template, $waitTimeMatches);
 preg_match('/MaxRetries: (.+)/', $template, $maxRetriesMatches);
 preg_match('/RetryTime: (.+)/', $template, $retryTimeMatches);
 preg_match('/Application: (.+)/', $template, $applicationMatches);
-preg_match('/(?:Data|Context): (.+)/', $template, $dataMatches);  // Обработка как Data, так и Context
+preg_match('/Data: (.+)/', $template, $dataMatches);
 
 $channel = isset($channelMatches[1]) ? $channelMatches[1] : 'Local/{{number}}@indebtedness-notify/n';
 $callerid = isset($calleridMatches[1]) ? $calleridMatches[1] : '781500000';
@@ -55,7 +95,7 @@ $waitTime = isset($waitTimeMatches[1]) ? $waitTimeMatches[1] : '50';
 $maxRetries = isset($maxRetriesMatches[1]) ? $maxRetriesMatches[1] : '{{attempts}}';
 $retryTime = isset($retryTimeMatches[1]) ? $retryTimeMatches[1] : '900';
 $application = isset($applicationMatches[1]) ? $applicationMatches[1] : 'Playback';
-$useContext = preg_match('/Context: /', $template) ? 'context' : 'data';  // Проверяем, используется ли Context или Data
+$data = isset($dataMatches[1]) ? $dataMatches[1] : 'neutral/notify/freelinkuzru';
 
 ?>
 
@@ -71,7 +111,7 @@ $useContext = preg_match('/Context: /', $template) ? 'context' : 'data';  // П�
     <div class="container">
         <a href="login.php" class="button-back">⏎</a>
         <header>
-            <h1>Управление шаблоном</h1>
+            <h1>Управление шаблоном и конфигурацией</h1>
         </header>
         
         <form method="POST" action="admin.php">
@@ -93,18 +133,26 @@ $useContext = preg_match('/Context: /', $template) ? 'context' : 'data';  // П�
             <label for="retryTime">RetryTime (Укажите время повтора):</label>
             <input type="number" id="retryTime" name="retryTime" value="<?php echo htmlspecialchars($retryTime); ?>">
 
-            <label for="useContext">Используемый контекст:</label>
-            <select id="useContext" name="useContext">
-                <option value="data" <?php if ($useContext == 'data') echo 'selected'; ?>>Data</option>
-                <option value="context" <?php if ($useContext == 'context') echo 'selected'; ?>>Context</option>
-            </select>
-
             <label for="application">Application (выбор из queue, playback, Dial):</label>
             <select id="application" name="application">
                 <option value="Playback" <?php if ($application == 'Playback') echo 'selected'; ?>>Playback</option>
                 <option value="queue" <?php if ($application == 'queue') echo 'selected'; ?>>Queue</option>
                 <option value="Dial" <?php if ($application == 'Dial') echo 'selected'; ?>>Dial</option>
             </select>
+
+            <label for="data">Data (Укажите контекст):</label>
+            <input type="text" id="data" name="data" value="<?php echo htmlspecialchars($data); ?>">
+
+            <h2>Конфигурация переносов файлов</h2>
+            
+            <label for="limit">Количество файлов для переноса за раз:</label>
+            <input type="number" id="limit" name="limit" value="<?php echo htmlspecialchars($config['limit']); ?>">
+
+            <label for="interval">Интервал времени между переносами (в секундах):</label>
+            <input type="number" id="interval" name="interval" value="<?php echo htmlspecialchars($config['interval']); ?>">
+
+            <label for="destination">Путь к папке назначения:</label>
+            <input type="text" id="destination" name="destination" value="<?php echo htmlspecialchars($config['destination']); ?>">
 
             <input type="submit" value="Сохранить изменения">
         </form>
