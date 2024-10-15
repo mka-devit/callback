@@ -1,0 +1,10 @@
+[Unit]
+Description="script check create folder"
+
+[Service]
+WorkingDirectory=/var/www/html/script
+
+ExecStart=/var/www/html/script/script1.sh
+
+[Install]
+WantedBy=multi-user.target

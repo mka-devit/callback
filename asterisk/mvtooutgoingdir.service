@@ -1,0 +1,11 @@
+[Unit]
+Description=Move files from /bash_callback/create to /var/spool/asterisk/outgoing
+After=network.target,asterisk
+
+[Service]
+ExecStart=/bin/bash /path/to/move_files.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
