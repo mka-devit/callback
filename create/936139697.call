@@ -1,0 +1,8 @@
+Channel: Local/936139697@callbackout/n
+Callerid: 936139697
+WaitTime: 20
+MaxRetries: 1
+RetryTime: 300
+Application: queue
+Data: kitob
+AlwaysDelete: Yes

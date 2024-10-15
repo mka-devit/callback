@@ -3,7 +3,7 @@ Description=Move files from /bash_callback/create to /var/spool/asterisk/outgoin
 After=network.target,asterisk
 
 [Service]
-ExecStart=/bin/bash /path/to/move_files.sh
+ExecStart=/bin/bash /bash_call/callback/asterisk/mvtooutgoingdir.sh
 Restart=always
 
 [Install]

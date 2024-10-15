@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Переменные
-SOURCE_DIR="/var/www/html/create"
-DEST_DIR="/var/www/html/syuda"
+SOURCE_DIR="/bash_call/callback/create"
+DEST_DIR="/var/spool/asterisk/outgoing"
 OWNER="asterisk:asterisk"
 FILES_PER_BATCH=5
-STATUS_FILE="/var/www/html/asterisk/status.txt"
+STATUS_FILE="/bash_call/callback/asterisk/status.txt"
 
 # Цикл проверки статуса и ожидания, если played=no
 check_status() {
