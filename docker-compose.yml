@@ -2,6 +2,7 @@ services:
   web:
     build: .
     container_name: php_app
+    platform: linux/amd64
     ports:
       - "2580:80"  # Перенаправление порта 8080 на 80
     volumes:

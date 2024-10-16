@@ -305,4 +305,57 @@ ul li:nth-child(even) {
         padding: 10px;
         font-size: 0.95em;
     }
+
+    /* Перемещение окна логов вниз на маленьких экранах */
+    .logs-section {
+        position: static;
+        width: auto;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    #logs-container {
+        max-height: none;
+    }
+}
+
+/* Стили для окна логов */
+.logs-section {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px; /* Ширина окна логов */
+    height: 200px; /* Высота окна логов */
+    background-color: #161b22;
+    color: #c9d1d9;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-y: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    /* Убираем анимации для окна логов */
+    animation: none;
+    transition: none;
+}
+
+.logs-section h2 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #79c0ff;
+}
+
+#logs-container {
+    max-height: 160px; /* Высота контейнера логов внутри окна */
+    overflow-y: auto;
+}
+
+.logs-section ul {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0;
+    margin: 0;
+}
+
+.logs-section li {
+    padding: 5px 0;
+    border-bottom: 1px solid #30363d;
 }

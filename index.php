@@ -184,10 +184,13 @@ function getSystemStatus() {
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <!-- Метаданные и ссылки на стили -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Страница Пользователя</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Подключаем шрифт -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Подключаем ваш файл стилей -->
     <link rel="stylesheet" href="style/styles.css">
 </head>
 <body>
@@ -196,17 +199,17 @@ function getSystemStatus() {
             <a href="login.php">⏎</a>
         </div>
 
-<!-- Перемещенная секция статистики -->
-<section class="statistics-section">
-    <h2><br>Статистика:</h2>
-    <p>Загружено: <?php echo getLastLogFileLineCount(); ?></p>
-    <p>Осталось: <?php echo getCreateDirectoryFileCount(); ?></p>
-    <p>Статус: <span id="status"><?php echo getSystemStatus(); ?></span></p> <!-- Используем getSystemStatus() -->
+        <!-- Секция статистики -->
+        <section class="statistics-section">
+            <h2><br>Статистика:</h2>
+            <p>Загружено: <?php echo getLastLogFileLineCount(); ?></p>
+            <p>Осталось: <?php echo getCreateDirectoryFileCount(); ?></p>
+            <p>Статус: <span id="status"><?php echo getSystemStatus(); ?></span></p>
+        </section>
 
-</section>
-
-
+        <!-- Остальной контент вашей страницы -->
         <header>
+            <!-- Здесь может быть ваш заголовок -->
         </header>
 
         <section class="upload-section">
@@ -219,12 +222,12 @@ function getSystemStatus() {
                 <label>Конечный диапазон:</label>
                 <input type="text" name="end_range" maxlength="9" pattern="\d{9}">
                 <button type="submit">Старт</button>
-                <!-- Cancel Button -->
+                <!-- Кнопка отмены -->
                 <button type="button" id="cancelButton">Отменить</button>
             </form>
         </section>
-        
-        <!-- Кнопка для Паузы/Запуска без перезагрузки -->
+
+        <!-- Кнопка для паузы/запуска без перезагрузки -->
         <button type="button" id="stopButton">Пауза/Запуск</button>
 
         <section class="block-section">
@@ -288,71 +291,22 @@ function getSystemStatus() {
                 ?>
             </div>
         </section>
-
-        <!-- JavaScript для выполнения асинхронного запроса без перезагрузки страницы -->
-        <script>
-        document.getElementById('stopButton').onclick = function() {
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'stop.php', true);
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                updateStatistics(); // Обновляем статистику после изменения статуса
-            } else if (xhr.status != 200) {
-                console.error('Произошла ошибка при изменении статуса.'); // Логируем ошибку в консоль
-            }
-        };
-        xhr.send();
-    };
-
-    document.getElementById('cancelButton').onclick = function() {
-        if (confirm("Вы уверены, что хотите отменить операцию? Это удалит все файлы и очистит логи.")) {
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'cancel.php', true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    alert('Файлы удалены и логи очищены!');
-                    updateStatistics();
-                } else if (xhr.status != 200) {
-                    console.error('Произошла ошибка при удалении.'); // Логируем ошибку в консоль
-                }
-            };
-            xhr.send();
-        }
-    };
-
-    function updateStatistics() {
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'update_stats.php', true);
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                var stats = JSON.parse(xhr.responseText);
-                document.querySelector('.statistics-section p:nth-child(2)').innerText = 'Загружено: ' + stats.lastLogFileLineCount;
-                document.getElementById('status').innerText = stats.status; // Обновляем статус
-                document.getElementById('scriptStatus').innerText = stats.scriptStatus; // Обновляем статус скрипта
-            }
-        };
-        xhr.send();
-    }
-
-
-    function updateRemainingFiles() {
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'update_stats.php', true);
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                var stats = JSON.parse(xhr.responseText);
-                // Обновляем только количество оставшихся файлов
-                document.querySelector('.statistics-section p:nth-child(3)').innerText = 'Осталось: ' + stats.createDirectoryFileCount;
-            }
-        };
-        xhr.send();
-    }
-
-    // Автоматическое обновление количества оставшихся файлов каждые 10 секунд
-    setInterval(updateRemainingFiles, 1000);
-</script>
-
-
     </div>
+
+    <!-- Окно логов -->
+    <section class="logs-section">
+        <h2>Логи:</h2>
+        <div id="logs-container"></div>
+    </section>
+
+<!-- Подключение внешних JavaScript-файлов -->
+<script src="scriptjs/notifications.js"></script>
+<script src="scriptjs/cancel.js"></script>
+<script src="scriptjs/startCall.js"></script>
+<script src="scriptjs/updateStatistics.js"></script>
+<script src="scriptjs/updateRemainingFiles.js"></script>
+<script src="scriptjs/updateLogs.js"></script>
+<script src="scriptjs/buttons.js"></script>
+<script src="scriptjs/init.js"></script>
 </body>
 </html>
