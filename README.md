@@ -6,6 +6,6 @@ Administrators can configure parameters and templates for automated calls throug
 
 <div style="display: flex; justify-content: center; gap: 10px;">
   <img src="https://github.com/user-attachments/assets/c64cb89b-dae7-443b-b847-d22164d05977" alt="Image 1" width="300">
+    <img src="https://github.com/user-attachments/assets/f7d49ab1-fc77-431c-a6fe-0b86e9b579b4" alt="Image 3" width="300">
   <img src="https://github.com/user-attachments/assets/26ee8304-cfc7-4ed4-bbf1-9bd640f5089f" alt="Image 2" width="300">
-  <img src="https://github.com/user-attachments/assets/f7d49ab1-fc77-431c-a6fe-0b86e9b579b4" alt="Image 3" width="300">
 </div>
